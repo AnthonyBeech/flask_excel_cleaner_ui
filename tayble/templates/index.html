@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Taybel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Select an Excel File to View (excel only)</h2>
+    <form method="post" action="/">
+        <div class="form-group">
+            <label for="excel_file">Excel Files:</label>
+            <select class="form-control" id="excel_file" name="excel_file" onchange="this.form.submit()">
+                {% for file in excel_files %}
+                <option value="{{ file }}" {% if file == selected_file %}selected{% endif %}>{{ file }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </form>
+
+    <h2>Choose a sheet to display</h2>
+    <h2 id="file_path" style="display: none;">{{ path }}</h2>
+
+    {% for sheet_name, table_html in tables.items() %}
+    <!-- Creating a button for each sheet/table -->
+    <button class="sheetButton" data-target="{{ sheet_name }}">{{ sheet_name }}</button>
+    <div id="tableContent_{{ sheet_name }}" style="display: none;">
+        {{ table_html|safe }}
+    </div>
+    {% endfor %}
+
+    <button id="doneButton">Done</button>
+    <button id="cancelButton">Cancel</button>
+
+
+
+    <div id="tableDiv">
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+

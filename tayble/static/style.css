@@ -1,0 +1,89 @@
+.blue { background-color: blue; color: white; }
+.green { background-color: green; color: white; }
+.red { background-color: red; color: white; }
+
+
+/* Reset some basic elements */
+body, h1, h2, button {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+h2 {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Container for sheets to add some padding & possibly a background */
+#sheetsContainer {
+    margin-bottom: 20px;
+}
+
+.sheetButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px 0;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sheetButton:hover {
+    background-color: #0056b3;
+}
+
+.tableContent {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-top: 5px;
+    display: none; /* Hidden by default, shown via JavaScript */
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#doneButton {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#doneButton:hover {
+    background-color: #218838;
+}
+
+#cancelButton {
+    background-color: #a72828;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
