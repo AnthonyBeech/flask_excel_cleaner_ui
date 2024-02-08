@@ -3,7 +3,7 @@ import os
 
 
 def list_excel_files(directory="data"):
-    return [f for f in os.listdir(directory)]
+    return [f for f in os.listdir(directory) if "." in f]
 
 
 def excel_to_html(path):
@@ -57,6 +57,7 @@ def excel_to_csv(path, coords, sheet_id):
 
 def _update_path(path, sheet_id):
     root, _ = os.path.splitext(path)
+    root = root.replace("data/", "data/csv/")
     new_path = f"{root}_{sheet_id}.csv"
 
     return new_path
