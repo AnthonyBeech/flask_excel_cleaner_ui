@@ -20,7 +20,7 @@ Select a region with two clicks. One for top left, and one bottom right. Cancel 
 * Data will be extracted as is.
 * Column/row removal will remove anthing within the column, data and header region.
 
-Once you've made selections, click to extract the csv to the /data folder
+Once you've made selections, click to extract the csv to the /data/csv/ folder
 
 
 ![Example Image](resources/usage.PNG)
